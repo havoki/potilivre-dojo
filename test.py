@@ -3,11 +3,10 @@ import dojo
 
 class listar(unittest.TestCase):
 	def testa_lista_size(self):
-		
-		lista2 = dojo.umAcem()	
+		lista = dojo.umAcem()	
 		self.assertEqual(
 				range(1, 101),
-				lista2
+				lista
 			)
 
 	def testa_fizz(self):
@@ -19,12 +18,23 @@ class listar(unittest.TestCase):
 				dojo.getElement(lista)
 			)
 	def testa_buzz(self):
-		lista = range(1, 6)
+		lista = range(4, 6)
+		buzzTest = dojo.getElement(lista)
+
+
 		self.assertEqual(
 			"Buzz",
 			dojo.getElement(lista)
 			)
+	def testa_fizz_buzz(self):
+		lista = range(14, 16)
+		fizzBuzzTest = dojo.getElement(lista)
 
+
+		self.assertEqual(
+			"FizzBuzz",
+			dojo.getElement(lista)
+			)	
 
 if __name__ == "__main__":
 	unittest.main()
